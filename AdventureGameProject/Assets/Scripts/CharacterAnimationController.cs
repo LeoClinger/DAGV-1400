@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class CharacterAnimationController : MonoBehaviour
@@ -14,26 +15,37 @@ public class CharacterAnimationController : MonoBehaviour
     {
         HandleAnimations();
     }
-
+    
     private void HandleAnimations()
     {
-        if (Input.GetAxis("Horizontal") != 0)
+        //double jump
+        if (Input.GetButtonDown("Jump"))
         {
-            animator.SetTrigger("Run");
+            animator.SetTrigger("DoubleJump");
         }
         else
         {
             animator.SetTrigger("Idle");
         }
         
-        if (Input.GetButtonDown("Jump"))
+        //Hit
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            animator.SetTrigger("Jump");
+            animator.SetTrigger("Hit");
+        }
+        else
+        {
+            animator.SetTrigger("Idle");
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        //Fall
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            animator.SetTrigger("WallJump");
+            animator.SetTrigger("Fall");
+        }
+        else
+        {
+            animator.SetTrigger("Idle");
         }
     }
 }
