@@ -645,6 +645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jumpForce: 1
+  gravity: -9.81
 --- !u!143 &1020659017
 CharacterController:
   m_ObjectHideFlags: 0
@@ -680,8 +682,8 @@ Transform:
   m_GameObject: {fileID: 1020659015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0.73, z: 0}
-  m_LocalScale: {x: 0.29707214, y: 0.24648075, z: 0.29707214}
+  m_LocalPosition: {x: -2.101325, y: 0.7335212, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.25, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 842343439}
