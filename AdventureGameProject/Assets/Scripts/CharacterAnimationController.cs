@@ -66,7 +66,7 @@ public class CharacterAnimationController : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("Idle");
+            animator.SetTrigger("IdleTrigger");
         }
     }
 }
