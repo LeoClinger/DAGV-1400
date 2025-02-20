@@ -34,11 +34,19 @@ public class CharacterAnimationController : MonoBehaviour
         {
             animator.SetTrigger("Jump");
         }
+        else
+        {
+            animator.SetTrigger("IdleTrigger");
+        }
         
         //wall jump
         if (Input.GetKeyDown(KeyCode.W))
         {
             animator.SetTrigger("WallJump");
+        }
+        else
+        {
+            animator.SetTrigger("IdleTrigger");
         }
         
         //Hit
@@ -55,6 +63,10 @@ public class CharacterAnimationController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             animator.SetTrigger("Fall");
+        }
+        else
+        {
+            animator.SetTrigger("Idle");
         }
     }
 }
