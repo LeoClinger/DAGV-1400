@@ -25,20 +25,6 @@ public class SimpleCharacterController : MonoBehaviour
         KeepCharacterOnXAxis();
     }
 
-     private void ApplyGravity()
-    {
-        if (!controller.isGrounded)
-        {
-            velocity.y += gravity * Time.deltaTime;
-        }
-        else
-        {
-            velocity.y = 0f;
-        }
-        
-        controller.Move(velocity * Time.deltaTime);
-    }
-
     private void MoveCharacter()
     {
         //Jump
@@ -54,12 +40,32 @@ public class SimpleCharacterController : MonoBehaviour
 
     }
 
-   
+    private void ApplyGravity()
+    {
+        if (!controller.isGrounded)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+        else
+        {
+            velocity.y = 0f;
+        }
+        
+        controller.Move(velocity * Time.deltaTime);
+    }
     
     private void KeepCharacterOnXAxis()
     {
         var currentPosition = thisTransform.position;
         currentPosition.z = 0f;
         thisTransform.position = currentPosition;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Collectable")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
