@@ -7,9 +7,12 @@ public class SimpleTriggerEventBehavior : MonoBehaviour
 {
    public UnityEvent triggerEvent;
 
-   private void OnTriggerEnter(Collider other)
-   {
-       //debug test
-       triggerEvent.Invoke();
-   }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+           triggerEvent.Invoke();
+           Destroy(gameObject);
+        }
+    }
 }
