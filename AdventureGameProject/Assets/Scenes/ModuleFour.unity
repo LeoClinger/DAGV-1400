@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a311c0a5f51b9134d8c2bf2e8daf2c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataObj: {fileID: 0}
+  dataObj: {fileID: 11400000, guid: 2d71c38075d219c4c9fd4eff905a9bba, type: 2}
 --- !u!114 &18435769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,6 +786,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &676426960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676426962}
+  - component: {fileID: 676426961}
+  m_Layer: 0
+  m_Name: HealthContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676426961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676426960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0f190baedcf5746b529d188c0147c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthData: {fileID: 11400000, guid: 2d71c38075d219c4c9fd4eff905a9bba, type: 2}
+--- !u!4 &676426962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676426960}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -8.406664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &842343439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5522077044152910282, guid: 6c28bedd1ab58804ab5c1e9fa49ebcad, type: 3}
@@ -2163,6 +2208,14 @@ PrefabInstance:
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 842343442}
+    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 676426961}
+    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 18435768}
     - target: {fileID: 6363358169549615053, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
       propertyPath: m_Name
       value: Mush
@@ -2327,41 +2380,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 842343442}
     - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 842343442}
+      objectReference: {fileID: 676426961}
     - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Hit
-      objectReference: {fileID: 0}
-    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 18435768}
     - target: {fileID: 6363358169549615053, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
       propertyPath: m_Name
       value: Mush (2)
@@ -2423,6 +2452,14 @@ PrefabInstance:
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 842343442}
+    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 676426961}
+    - target: {fileID: -6944062102560581571, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 18435768}
     - target: {fileID: 6363358169549615053, guid: ee10a9e0033dff347904daa12bba44b1, type: 3}
       propertyPath: m_Name
       value: Mush (1)
@@ -2647,3 +2684,4 @@ SceneRoots:
   - {fileID: 2011715530}
   - {fileID: 1095485535}
   - {fileID: 985205083}
+  - {fileID: 676426962}
