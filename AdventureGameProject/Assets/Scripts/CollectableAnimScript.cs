@@ -8,24 +8,20 @@ using UnityEngine.Events;
 public class CollectableAnimScript : MonoBehaviour
 {
     private Animator animator;
-    private Collider other;
-
+    
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-        CollectAnimations();
-    }
+ 
 
-    private void CollectAnimations()
+    private void OnTriggerEnter(Collider other)
     {
-        //collect
-        if (other.gameObject.tag == "Player")
-        {
-            animator.SetTrigger("Collect");
-        }
+         //collect
+         if (other.gameObject.tag == "Player")
+            {
+                animator.SetTrigger("Collect");
+            }
     }
 }

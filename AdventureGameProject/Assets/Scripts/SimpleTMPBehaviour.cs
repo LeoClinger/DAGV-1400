@@ -24,6 +24,6 @@ public class SimpleTMPBehaviour : MonoBehaviour
 
     public void UpdateWithIntData()
     {
-        textObj.text = "Score: " + dataObj.value.ToString(CultureInfo.InvariantCulture);
+        textObj.text = "Score : " + dataObj.value.ToString(CultureInfo.InvariantCulture);
     }
 }

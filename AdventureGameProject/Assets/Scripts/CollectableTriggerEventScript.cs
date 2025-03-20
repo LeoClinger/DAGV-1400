@@ -14,7 +14,7 @@ public class CollectableTriggerEventScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             triggerEvent.Invoke();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
