@@ -9,6 +9,11 @@ public class SimpleTriggerEventBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.GetComponent<CharacterController>())
+        {
             triggerEvent.Invoke();
+        }
+   
     }
 }
+ 
