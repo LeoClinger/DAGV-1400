@@ -3263,6 +3263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pineapple_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5812733808265638362, guid: e13780f058a2f0c4c8ec537accf3db4c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
