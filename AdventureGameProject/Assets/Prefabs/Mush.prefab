@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 6833304204059930090}
   - component: {fileID: 6958868674085861446}
   - component: {fileID: 7640332666073519944}
-  - component: {fileID: 4498629974170605295}
+  - component: {fileID: 2504577330221561971}
   m_Layer: 0
   m_Name: Mush
   m_TagString: Untagged
@@ -5180,7 +5180,7 @@ NavMeshAgent:
   m_BaseOffset: 0.16
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4498629974170605295
+--- !u!114 &2504577330221561971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5189,7 +5189,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6363358169549615053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adfef89ec31f2e24b91b24909987dd37, type: 3}
+  m_Script: {fileID: 11500000, guid: 3caf1f874ffb12d4aad4d3d02f5c258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
