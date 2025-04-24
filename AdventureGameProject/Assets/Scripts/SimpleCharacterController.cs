@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CharacterController))]
 public class SimpleCharacterController : MonoBehaviour
 {
@@ -23,8 +24,9 @@ public class SimpleCharacterController : MonoBehaviour
         MoveCharacter();
         ApplyGravity();
         KeepCharacterOnXAxis();
+        QuitGame();
     }
-
+    
     private void MoveCharacter()
     {
         //Jump
@@ -68,4 +70,13 @@ public class SimpleCharacterController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public void QuitGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+    
 }
