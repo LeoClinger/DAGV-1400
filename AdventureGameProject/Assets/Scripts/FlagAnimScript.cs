@@ -17,7 +17,8 @@ public class FlagAnimScript : MonoBehaviour
         //flag up
         if (other.gameObject.tag == "Player")
         {
-            animator.SetTrigger("PullFlag");
+            animator.SetTrigger("HitFlag");
+            animator.SetTrigger("Fly");
         }
     }
 }
