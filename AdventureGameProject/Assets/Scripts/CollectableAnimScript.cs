@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,8 +20,8 @@ public class CollectableAnimScript : MonoBehaviour
     {
          //collect
          if (other.gameObject.tag == "Player")
-            {
-                animator.SetTrigger("Collect");
-            }
+         {
+             animator.SetTrigger("Collect");
+         }
     }
 }
